@@ -3,6 +3,8 @@
 <dl>
 <dt><a href="#OAuth">OAuth</a></dt>
 <dd></dd>
+<dt><a href="#PlaylistClient">PlaylistClient</a></dt>
+<dd></dd>
 <dt><a href="#VideoClient">VideoClient</a></dt>
 <dd></dd>
 </dl>
@@ -40,6 +42,51 @@ Check if the last received token is still valid, return it if valid or request a
 Request a new access token
 
 **Kind**: instance method of <code>[OAuth](#OAuth)</code>  
+<a name="PlaylistClient"></a>
+
+## PlaylistClient
+**Kind**: global class  
+
+* [PlaylistClient](#PlaylistClient)
+    * [new PlaylistClient(accountId, oauthClient)](#new_PlaylistClient_new)
+    * [.getPlaylists(options)](#PlaylistClient+getPlaylists) ⇒ <code>Promise</code>
+    * [.getVideos(playlistID)](#PlaylistClient+getVideos) ⇒ <code>Promise</code>
+
+<a name="new_PlaylistClient_new"></a>
+
+### new PlaylistClient(accountId, oauthClient)
+Represents the Playlist API object.
+
+
+| Param | Type | Description |
+| --- | --- | --- |
+| accountId | <code>string</code> | The account ID to lookup videos against. |
+| oauthClient | <code>[OAuth](#OAuth)</code> | The authorized api client. |
+
+<a name="PlaylistClient+getPlaylists"></a>
+
+### playlistClient.getPlaylists(options) ⇒ <code>Promise</code>
+Call the Playlist API via the OAuth Client to get the playlists
+
+**Kind**: instance method of <code>[PlaylistClient](#PlaylistClient)</code>  
+**Returns**: <code>Promise</code> - - The promise.  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| options | <code>Object</code> | addition parameters. |
+
+<a name="PlaylistClient+getVideos"></a>
+
+### playlistClient.getVideos(playlistID) ⇒ <code>Promise</code>
+Call the Get Playlist API via the OAuth Client
+
+**Kind**: instance method of <code>[PlaylistClient](#PlaylistClient)</code>  
+**Returns**: <code>Promise</code> - - The promise.  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| playlistID | <code>Number</code> | Playlist ID. |
+
 <a name="VideoClient"></a>
 
 ## VideoClient
@@ -47,7 +94,7 @@ Request a new access token
 
 * [VideoClient](#VideoClient)
     * [new VideoClient(accountId, oauthClient)](#new_VideoClient_new)
-    * [.getVideos(options, callback)](#VideoClient+getVideos)
+    * [.getVideos(options)](#VideoClient+getVideos) ⇒ <code>Promise</code>
 
 <a name="new_VideoClient_new"></a>
 
@@ -62,13 +109,13 @@ Represents the Video API object.
 
 <a name="VideoClient+getVideos"></a>
 
-### videoClient.getVideos(options, callback)
+### videoClient.getVideos(options) ⇒ <code>Promise</code>
 Call the Get Videos API via the OAuth Client
 
 **Kind**: instance method of <code>[VideoClient](#VideoClient)</code>  
+**Returns**: <code>Promise</code> - - The promise.  
 
 | Param | Type | Description |
 | --- | --- | --- |
 | options | <code>Object</code> | addition parameters. |
-| callback | <code>function</code> | The callback. |
 
