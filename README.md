@@ -6,6 +6,24 @@ This is similar to the pattern that was from the previous generation for easier 
 
 If someone wants to provide account information for testing purposes to get code coverage going that would be great.
 
+## Quick example
+
+```
+var nbright = require('nbright');
+
+var oAuthClient = new nbright.OAuth('<CLIENT_ID>', '<SECRET>');
+var videoClient = new nbright.Video('<ACCOUNT_ID>',oAuthClient);
+
+videoClient.getVideos(
+  {
+    limit: 1
+  },function(err,result){
+  console.log(result);
+});
+
+```
+
+
 ## Api Reference
 
 [API Documentation](lib/README.md)
