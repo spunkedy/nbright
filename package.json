@@ -1,6 +1,6 @@
 {
   "name": "nbright",
-  "version": "1.0.2",
+  "version": "1.0.5",
   "description": "Brightcove video cloud node js API ",
   "main": "index.js",
   "scripts": {
@@ -12,6 +12,7 @@
     "events": "^1.1.1",
     "https": "^1.0.0",
     "jsuri": "^1.3.1",
+    "promise": "^7.1.1",
     "util": "^0.10.3"
   }
 }
