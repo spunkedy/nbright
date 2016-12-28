@@ -1,6 +1,8 @@
 ## Classes
 
 <dl>
+<dt><a href="#AssetsClient">AssetsClient</a></dt>
+<dd></dd>
 <dt><a href="#OAuth">OAuth</a></dt>
 <dd></dd>
 <dt><a href="#PlaylistClient">PlaylistClient</a></dt>
@@ -8,6 +10,38 @@
 <dt><a href="#VideoClient">VideoClient</a></dt>
 <dd></dd>
 </dl>
+
+<a name="AssetsClient"></a>
+
+## AssetsClient
+**Kind**: global class  
+
+* [AssetsClient](#AssetsClient)
+    * [new AssetsClient(accountId, oauthClient)](#new_AssetsClient_new)
+    * [.getRenditions(options)](#AssetsClient+getRenditions) ⇒ <code>Promise</code>
+
+<a name="new_AssetsClient_new"></a>
+
+### new AssetsClient(accountId, oauthClient)
+Represents the Video API object.
+
+
+| Param | Type | Description |
+| --- | --- | --- |
+| accountId | <code>string</code> | The account ID to lookup videos against. |
+| oauthClient | <code>[OAuth](#OAuth)</code> | The authorized api client. |
+
+<a name="AssetsClient+getRenditions"></a>
+
+### assetsClient.getRenditions(options) ⇒ <code>Promise</code>
+Call the Get Videos API via the OAuth Client
+
+**Kind**: instance method of <code>[AssetsClient](#AssetsClient)</code>  
+**Returns**: <code>Promise</code> - - The promise.  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| options | <code>Object</code> | addition parameters. |
 
 <a name="OAuth"></a>
 
@@ -95,6 +129,7 @@ Call the Get Playlist API via the OAuth Client
 * [VideoClient](#VideoClient)
     * [new VideoClient(accountId, oauthClient)](#new_VideoClient_new)
     * [.getVideos(options)](#VideoClient+getVideos) ⇒ <code>Promise</code>
+    * [.getVideoSources(videoId)](#VideoClient+getVideoSources) ⇒ <code>Promise</code>
 
 <a name="new_VideoClient_new"></a>
 
@@ -118,4 +153,16 @@ Call the Get Videos API via the OAuth Client
 | Param | Type | Description |
 | --- | --- | --- |
 | options | <code>Object</code> | addition parameters. |
+
+<a name="VideoClient+getVideoSources"></a>
+
+### videoClient.getVideoSources(videoId) ⇒ <code>Promise</code>
+Call the Get Videos API via the OAuth Client
+
+**Kind**: instance method of <code>[VideoClient](#VideoClient)</code>  
+**Returns**: <code>Promise</code> - - The promise.  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| videoId | <code>String</code> | Video ID to lookup. |
 
